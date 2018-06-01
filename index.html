@@ -5,16 +5,17 @@
     <title>Jukebox</title>
   </head>
   <body>
-    <audio class="example" controls>
+    <audio class="player" controls>
       <source  src="https://www.bensound.com/bensound-music/bensound-buddy.mp3" type="audio/ogg">
       
     Your browser does not support the audio element.
     </audio>
     <button type="button" name="button" onclick="Play()">PLAY</button>
     <button type="button" name="button" onclick="Pause()">PAUSE</button>
+    <button type="button" name="button" onclick="Next()">Next</button>
 
     Play URL<input type="text" id="playurl">
-    <button type="button" name="button" onclick="PlayUrl()">ADD</button>
+    <button type="button" name="button" onclick="AddUrl()">ADD</button>
     <script type="text/javascript" src="Jukebox.js">
 
     </script>
