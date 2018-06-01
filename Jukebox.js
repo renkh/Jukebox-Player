@@ -13,6 +13,8 @@ function Jukebox() {
   this.audioSources = ["https://www.bensound.com/bensound-music/bensound-betterdays.mp3","https://www.bensound.com/bensound-music/bensound-dubstep.mp3"];
   //connects Jukebox to audio player with specified class
   this.audioPlayer = document.querySelector(".player");
+  //title of song
+  this.title = this.audioSources[this.currentSong];
   //index of the current song, def val = 0
   this.currentSong = 0;
   //update src of audio to the player, using current song as index
@@ -20,6 +22,8 @@ function Jukebox() {
   //play functionality
   this.play = function() {
     this.audioPlayer.play();
+    var x = document.getElementById("title");
+    x.querySelector(".nameOfSong").innerHTML = this.audioSources[this.currentSong];
   }
   //pause
   this.pause = function() {
@@ -41,6 +45,8 @@ function Jukebox() {
     else {
       this.audioPlayer.src = this.audioSources[++this.currentSong];
       this.audioPlayer.play();
+      var x = document.getElementById("title");
+      x.querySelector(".nameOfSong").innerHTML = this.audioSources[this.currentSong];
     }
   }
   //plays the previous song, decrements currentSong to the access the prev item in the array
@@ -54,6 +60,8 @@ function Jukebox() {
     else{
       this.audioPlayer.src = this.audioSources[--this.currentSong];
       this.audioPlayer.play();
+      var x = document.getElementById("title");
+      x.querySelector(".nameOfSong").innerHTML = this.audioSources[this.currentSong];
     }
   }
   //adds a song to the array, url provided by user
