@@ -21,6 +21,14 @@ body {
   margin: 10px;
 }
 
+#title {
+  margin: 10px;
+}
+
+.player {
+  margin: 10px;
+}
+
 .btns {
   display: flex;
   flex-direction: row;
