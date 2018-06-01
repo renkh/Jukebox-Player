@@ -32,12 +32,26 @@ function Jukebox() {
   }
   //plays the next song, increments currentSong to access the next item in array
   this.nextSong = function(){
-    this.audioPlayer.src = this.audioSources[++this.currentSong];
-    this.audioPlayer.play();
+    //if at the last index, pause song, display alert
+    if (this.currentSong === this.audioSources.length - 1)
+    {
+      this.audioPlayer.pause();
+      alert("At the last song");
+    }
+    else {
+      this.audioPlayer.src = this.audioSources[++this.currentSong];
+      this.audioPlayer.play();
+    }
   }
   //plays the previous song, decrements currentSong to the access the prev item in the array
   this.prevSong = function(){
-    if(this.currentSong > 0){
+    //if at first song, pause song, display alert
+    if (this.currentSong === 0)
+    {
+      this.audioPlayer.pause();
+      alert("At the first song");
+    }
+    else{
       this.audioPlayer.src = this.audioSources[--this.currentSong];
       this.audioPlayer.play();
     }
