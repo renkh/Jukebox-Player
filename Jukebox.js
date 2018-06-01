@@ -1,15 +1,3 @@
-function Play() {
-  myJukebox.play();
-}
-
-function Pause() {
-  myJukebox.pause();
-}
-
-function Next() {
-  myJukebox.nextSong();
-}
-
 function PlayUrl() {
   var songUrl = document.querySelector("#playurl").value;
   myJukebox.playSong(songUrl);
@@ -37,6 +25,14 @@ function Jukebox() {
   }
   this.nextSong = function(){
     this.audioPlayer.src = this.audioSources[++this.currentSong];
+    this.audioPlayer.play();
+  }
+  this.prevSong = function(){
+    if(this.currentSong > 0){
+      this.audioPlayer.src = this.audioSources[--this.currentSong];
+      this.audioPlayer.play();
+    }
+    
   }
   this.addSong = function(url){
     this.audioSources.push(url);
