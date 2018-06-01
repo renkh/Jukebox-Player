@@ -1,0 +1,31 @@
+body {
+  height: 100vh;
+  max-height: 100%;
+  min-height: 100%;
+}
+
+.jumbotron {
+  margin: 0px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.url {
+  display: flex;
+  flex-direction: row;
+}
+
+.url > * {
+  margin: 10px;
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.btns > * {
+  margin: 10px;
+}

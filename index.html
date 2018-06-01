@@ -10,9 +10,11 @@
     <div class="jumbotron">
       <h1 class="display-4">Jukebox</h1>
       <hr class="my-4">
-      <p class="lead">Enter URL to play</p>
-    <input type="text" id="playurl">
-    <button type="button" name="button" onclick="AddUrl()">ADD</button>
+      <div class="url">
+        <p class="lead">Enter URL to play</p>
+        <input type="text" id="playurl">
+        <button type="button" name="button" onclick="AddUrl()">ADD</button>
+      </div>
     <br>
     <audio class="player" controls>
       <source  src="https://www.bensound.com/bensound-music/bensound-buddy.mp3" type="audio/ogg">
@@ -21,10 +23,12 @@
     </audio>
 
     <br>
-    <button type="button" name="button" onclick="myJukebox.play()">PLAY</button>
-    <button type="button" name="button" onclick="myJukebox.pause()">PAUSE</button>
-    <button type="button" name="button" onclick="myJukebox.nextSong()">Next</button>
-    <button type="button" name="button" onclick="myJukebox.prevSong()">Previous</button>
+    <div class="btns">
+      <button type="button" name="button" onclick="myJukebox.play()">PLAY</button>
+      <button type="button" name="button" onclick="myJukebox.pause()">PAUSE</button>
+      <button type="button" name="button" onclick="myJukebox.nextSong()">Next</button>
+      <button type="button" name="button" onclick="myJukebox.prevSong()">Previous</button>
+    </div>
   </div>
 
 
